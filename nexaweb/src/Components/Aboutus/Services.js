@@ -17,7 +17,9 @@ function Services() {
         sx={{
             py: 12,
             px: 4,
-            background: 'linear-gradient(to right, #4a90e2, #6dd5ed)', // Gradient colors
+            backgroundColor: 'transparent',  // Transparent background
+            boxShadow: 'none',               // Remove the shadow
+            backdropFilter: 'blur(10px)',    // Optional: adds a blur effect for a glassy look
             color: 'white' // Text color for better contrast
         }}
     >
