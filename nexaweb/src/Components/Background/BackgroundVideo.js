@@ -1,6 +1,5 @@
 import React from 'react';
 import './BackgroundVideo.css';
-import { colors } from '@mui/material';
 
 const BackgroundVideo = () => {
   const videoStyle = {
