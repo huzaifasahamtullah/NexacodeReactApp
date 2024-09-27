@@ -81,7 +81,6 @@ export default function Navbar() {
           <ButtonUsage></ButtonUsage>
         </Toolbar>
       </AppBar>
-
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         {drawerList}
       </Drawer>
