@@ -1,0 +1,55 @@
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+  }
+  
+  .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .animated-text {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Your gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .animated-subtext {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .animated-text {
+      font-size: 2rem; /* Reduce text size on tablets */
+    }
+  
+    .animated-subtext {
+      font-size: 1rem; /* Adjust subtext for smaller screens */
+    }
+  }
+  
+
+
+  
+  @media (max-width: 768px) {
+    .animated-text {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .animated-text {
+      font-size: 1.5rem;
+    }
+  }
