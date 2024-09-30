@@ -1,82 +1,82 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
+import { Box, Link, Typography, Card } from "@mui/material";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaLinkedinIn, FaSkype, FaWhatsapp } from "react-icons/fa"; // Import all icons
 
 function FixedFooter() {
     // LinkGroup Component
-    const LinkGroup = ({ header, children }) => {
-        return (
-            <Grid item xs={12} sm={6} lg={2}>
-                <Box mb={2}>
-                    <Typography variant="h6" color="textPrimary">
-                        {header}
-                    </Typography>
-                    <Box component="ul" p={0} m={0} style={{ listStyle: "none" }}>
-                        {children}
-                    </Box>
+    const LinkGroup = ({ header, children }) => (
+        <Grid item xs={12} sm={6} lg={3}>
+            <Box mb={2} textAlign="center">
+                <Typography variant="h6" color="inherit" gutterBottom>
+                    {header}
+                </Typography>
+                <Box component="ul" p={0} m={0} style={{ listStyle: "none" }}>
+                    {children}
                 </Box>
-            </Grid>
-        );
-    };
+            </Box>
+        </Grid>
+    );
 
     // NavLink Component
-    const NavLink = ({ link, label }) => {
-        return (
-            <Box component="li" mb={1}>
-                <Link href={link} variant="body2" color="textSecondary" underline="hover">
-                    {label}
-                </Link>
-            </Box>
-        );
-    };
+    const NavLink = ({ link, label }) => (
+        <Box component="li" mb={1}>
+            <Link href={link} variant="body2" color="inherit" underline="hover">
+                {label}
+            </Link>
+        </Box>
+    );
 
     return (
-        <Box
+        <Card
             sx={{
-                py: 8,
+                py: 6,
                 px: 4,
-                backgroundColor: 'rgba(0,0,0,0.7)', // Example of semi-transparent background
-                backdropFilter: 'blur(10px)',
+                backgroundColor: 'rgba(0, 0, 0, 0.9)', // Dark background for footer
                 color: 'white',
                 width: '100%',
             }}
         >
             <Box maxWidth="lg" mx="auto">
                 <Grid container spacing={4}>
+                    {/* Nexacode App Section */}
                     <Grid item xs={12} sm={6} lg={3}>
-                        <Box mb={2}>
+                        <Box mb={2} textAlign="center"> {/* Center alignment for all text */}
                             <Link href="/#" underline="none">
                                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                                     Nexacode App
                                 </Typography>
                             </Link>
-                            <Typography variant="body2" color="textSecondary" paragraph>
-                                Sed ut perspiciatis undmnis iste natus error sit voluptatem totam rem aperiam.
+                            <Typography variant="body2" color="inherit" paragraph>
+                                #1 Digital Solution With 10 Years Of Experience.
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center">
+
+                            {/* Phone Number */}
+                            <Typography variant="body2" color="inherit" display="flex" justifyContent="center" alignItems="center" mb={1}>
                                 <Box component="span" color="primary.main" mr={1}>
-                                    {/* SVG icon for phone */}
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <g clipPath="url(#clip0_941_15626)">
-                                            <path
-                                                d="M15.1875 19.4688C14.3438 19.4688 13.375 19.25 12.3125 18.8438C10.1875 18 7.84377 16.375 5.75002 14.2813C3.65627 12.1875 2.03127 9.84377 1.18752 7.68752C0.250019 5.37502 0.343769 3.46877 1.43752 2.40627C1.46877 2.37502 1.53127 2.34377 1.56252 2.31252L4.18752 0.750025C4.84377 0.375025 5.68752 0.562525 6.12502 1.18752L7.96877 3.93753C8.40627 4.59378 8.21877 5.46877 7.59377 5.90627L6.46877 6.68752C7.28127 8.00002 9.59377 11.2188 13.2813 13.5313L13.9688 12.5313C14.5 11.7813 15.3438 11.5625 16.0313 12.0313L18.7813 13.875C19.4063 14.3125 19.5938 15.1563 19.2188 15.8125L17.6563 18.4375C17.625 18.5 17.5938 18.5313 17.5625 18.5625C17 19.1563 16.1875 19.4688 15.1875 19.4688Z"
-                                                fill="currentColor"
-                                            />
-                                        </g>
-                                    </svg>
+                                    <FaPhone size={20} />
                                 </Box>
-                                +012 (345) 678 99
+                                <span>+971 52 825 1053</span>
+                            </Typography>
+
+                            {/* Email */}
+                            <Typography variant="body2" color="inherit" display="flex" justifyContent="center" alignItems="center" mb={1}>
+                                <Box component="span" color="primary.main" mr={1}>
+                                    <FaEnvelope size={20} />
+                                </Box>
+                                <span>nexacodesolution@gmail.com</span>
+                            </Typography>
+
+                            {/* Address */}
+                            <Typography variant="body2" color="inherit" display="flex" justifyContent="center" alignItems="center">
+                                <Box component="span" color="primary.main" mr={1}>
+                                    <FaMapMarkerAlt size={20} />
+                                </Box>
+                                <span>UAE, Dubai</span>
                             </Typography>
                         </Box>
                     </Grid>
 
+                    {/* Link Groups Section */}
                     <LinkGroup header="Resources">
                         <NavLink link="/#" label="SaaS Development" />
                         <NavLink link="/#" label="Our Products" />
@@ -85,7 +85,7 @@ function FixedFooter() {
                     </LinkGroup>
 
                     <LinkGroup header="Company">
-                        <NavLink link="/#" label="About TailGrids" />
+                        <NavLink link="/#" label="About Nexacode" />
                         <NavLink link="/#" label="Contact & Support" />
                         <NavLink link="/#" label="Success History" />
                         <NavLink link="/#" label="Setting & Privacy" />
@@ -98,29 +98,43 @@ function FixedFooter() {
                         <NavLink link="/#" label="Download App" />
                     </LinkGroup>
 
+                    {/* Social Media Section */}
                     <Grid item xs={12} sm={6} lg={3}>
-                        <Box mb={2}>
-                            <Typography variant="h6" color="textPrimary">
+                        <Box mb={2} textAlign="center">
+                            <Typography variant="h6" className="animated-text">
                                 Follow Us On
                             </Typography>
-                            <Box mt={2} display="flex" gap={2}>
-                                {/* Example social icons */}
-                                <Link href="javascript:void(0)" color="inherit">
-                                    <svg width="20" height="20" fill="currentColor">
-                                        {/* Facebook icon SVG */}
-                                    </svg>
+                            <Box mt={2} display="flex" justifyContent="center" gap={2}>
+                                {/* Facebook Icon */}
+                                <Link href="https://facebook.com" color="inherit">
+                                    <FaFacebookF size={24} />
                                 </Link>
-                                <Link href="javascript:void(0)" color="inherit">
-                                    <svg width="20" height="20" fill="currentColor">
-                                        {/* Twitter icon SVG */}
-                                    </svg>
+
+                                {/* Instagram Icon */}
+                                <Link href="https://instagram.com" color="inherit">
+                                    <FaInstagram size={24} />
+                                </Link>
+
+                                {/* LinkedIn Icon */}
+                                <Link href="https://linkedin.com" color="inherit">
+                                    <FaLinkedinIn size={24} />
+                                </Link>
+
+                                {/* Skype Icon */}
+                                <Link href="https://skype.com" color="inherit">
+                                    <FaSkype size={24} />
+                                </Link>
+
+                                {/* WhatsApp Icon */}
+                                <Link href="https://whatsapp.com" color="inherit">
+                                    <FaWhatsapp size={24} />
                                 </Link>
                             </Box>
                         </Box>
                     </Grid>
                 </Grid>
             </Box>
-        </Box>
+        </Card>
     );
 }
 

@@ -34,15 +34,13 @@ function Services() {
                             align={isSmallScreen ? "center" : "left"}
                             fontWeight="bold"
                         >
-                         <h1 className="animated-text">Our Services & Solutions</h1>   
+                            <h1 className="animated-text">Our Services & Solutions</h1>
                         </Typography>
                     </ScrollAnimation>
                     <ScrollAnimation animateIn="flipInX" duration={1} delay={0.2 * 1000}>
-                       
-                            <p className="animated-subtext">  Our achievement story is a testament to teamwork and
-                            perseverance. Together, we've overcome challenges, celebrated
-                            victories, and created a narrative of progress and success.</p>
-                          
+                        <p className="animated-subtext">At Nexacode Solutions, we offer a comprehensive suite of services,
+                             including custom software development, mobile app solutions, and web design. Our innovative,
+                              tailored approaches ensure your business stays ahead in the competitive digital landscape.</p>
                     </ScrollAnimation>
                     {/* Grid for Cards */}
                     <Grid container spacing={4} sx={{ mt: 3 }}>
@@ -56,7 +54,7 @@ function Services() {
                                             </Typography>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
-                                        <div><img   src="/Images/webdesing.png" height={300} width={300}></img> </div>
+                                            <div><img src="/Images/webdesing.png" height={300} width={300}></img> </div>
                                         </ScrollAnimation>
                                         <Divider sx={{ mb: 2 }} />
                                         <ScrollAnimation animateIn="flipInX" duration={1} delay={0.2 * 1000}>
@@ -93,7 +91,7 @@ function Services() {
                                             </Typography>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
-                                        <div><img   src="/Images/uiux.png" height={300} width={300}></img> </div>
+                                            <div><img src="/Images/uiux.png" height={300} width={300}></img> </div>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="flipInX" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="body2" color="textSecondary">
@@ -119,16 +117,16 @@ function Services() {
                     {/* Repeat for remaining boxes if needed */}
                     <Grid container spacing={4} sx={{ mt: 3 }}>
                         <Grid item xs={12} sm={6}>
-                        <ScrollAnimation animateIn="fadeInUp" duration={0.8} delay={0.2 * 1000}>
+                            <ScrollAnimation animateIn="fadeInUp" duration={0.8} delay={0.2 * 1000}>
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                    <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
+                                        <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 ERP Systems
                                             </Typography>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
-                                        <div><img   src="/Images/webdesing.png" height={300} width={300}></img> </div>
+                                            <div><img src="/Images/webdesing.png" height={300} width={300}></img> </div>
                                         </ScrollAnimation>
                                         <Divider sx={{ mb: 2 }} />
                                         <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
@@ -160,16 +158,16 @@ function Services() {
                             </ScrollAnimation>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                        <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
+                            <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                    <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
+                                        <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 Custom Software Development
                                             </Typography>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
-                                        <div><img   src="/Images/seo.png" height={300} width={300}></img> </div>
+                                            <div><img src="/Images/seo.png" height={300} width={300}></img> </div>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="body2" color="textSecondary">
@@ -196,16 +194,16 @@ function Services() {
                     </Grid>
                     <Grid container spacing={4} sx={{ mt: 3 }}>
                         <Grid item xs={12} sm={6}>
-                        <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
+                            <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                    <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
+                                        <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 Digital Marketing
                                             </Typography>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
-                                        <div><img   src="/Images/webdev.png" height={300} width={300}></img> </div>
+                                            <div><img src="/Images/webdev.png" height={300} width={300}></img> </div>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="body2" color="textSecondary">
@@ -232,7 +230,7 @@ function Services() {
                                             </Typography>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="fadeInUp" duration={1} delay={0.2 * 1000}>
-                                        <div><img   src="/Images/uiux.png" height={300} width={300}></img> </div>
+                                            <div><img src="/Images/uiux.png" height={300} width={300}></img> </div>
                                         </ScrollAnimation>
                                         <ScrollAnimation animateIn="flipInY" duration={1} delay={0.2 * 1000}>
                                             <Typography variant="body2" color="textSecondary">
