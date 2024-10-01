@@ -88,7 +88,7 @@ function FixedFooter() {
                                 <Box component="span" color="primary.main" mr={1}>
                                     <FaEnvelope size={20} />
                                 </Box>
-                                <span>infok@nexacodesolution.com</span>
+                                <span>info@nexacodesolution.com</span>
                             </Typography>
 
                             {/* Address */}
