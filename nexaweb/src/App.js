@@ -4,50 +4,40 @@ import Services from './Components/Aboutus/Services';
 import About from './Components/Aboutus/About';
 import FixedFooter from './Components/Footer/FixedFooter';
 import AnimatedCursor from "react-animated-cursor";
-import ExampleComponent from './Components/AnimationComponents/ExampleComponent';
 import IconCloudDemo from './Components/AnimationComponents/IconCloudDemo';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import GraphicWorkSlider from './Components/AnimationComponents/GraphicWorkSlider';
+import ContactComponent from './Components/Aboutus/ContactComponent';
 
+// Create a theme
+const theme = createTheme();
 function App() {
   return (
     <div className="App">
       <AnimatedCursor
-        innerSize={8}
-        outerSize={8}
-        color="0, 0, 255"
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={5}
+        innerSize={10}     // Set inner cursor size
+        outerSize={20}     // Set outer cursor size
+        color="100, 100, 200" // Set color to a nicer blue (RGB format)
+        outerAlpha={0.4}    // Slightly increase outer transparency
+        innerScale={0.9}    // Reduced scaling for a tighter inner cursor
+        outerScale={4}      // Smooth outer cursor effect
         clickables={[
           "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          "label[for]",
-          "select",
-          "textarea",
           "button",
+          "input",
+          "textarea",
+          "select",
           ".link",
-          {
-            target: ".custom",
-            options: {
-              innerSize: 12,
-              outerSize: 12,
-              color: "255, 255, 255",
-              outerAlpha: 0.3,
-              innerScale: 0.7,
-              outerScale: 5,
-            },
-          },
+          ".custom" // Removed specific type inputs and unnecessary options
         ]}
       />
       <Navbar></Navbar>
       <BackgroundVideo></BackgroundVideo>
-      <ExampleComponent></ExampleComponent>
       <IconCloudDemo />
       <About></About>
       <Services></Services>
+      <GraphicWorkSlider />
+      <ContactComponent/>
       <FixedFooter></FixedFooter>
     </div>
   );
