@@ -45,45 +45,48 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar 
-        position="static"
-        sx={{
-          backgroundColor: 'transparent',  // Transparent background
-          boxShadow: 'none',               // Remove the shadow
-          backdropFilter: 'blur(10px)',    // Optional: adds a blur effect for a glassy look
-        }}
-      >
-        <Toolbar>
-          {isMobile && (
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Nexacode App
-          </Typography>
-          {!isMobile && (
-            <>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">About</Button>
-              <Button color="inherit">Services</Button>
-              <Button color="inherit">Contact</Button>
-            </>
-          )}
-          <ButtonUsage></ButtonUsage>
-        </Toolbar>
-      </AppBar>
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-        {drawerList}
-      </Drawer>
-    </Box>
+    <div id="home">
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar
+          position="fixed"  // Change to fixed for sticky navbar
+          sx={{
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',  // Optional: Adds a background color
+            boxShadow: 'none',
+            backdropFilter: 'blur(10px)',
+            zIndex: 1000,  // Ensure it stays on top of other content
+          }}
+        >
+          <Toolbar>
+            {isMobile && (
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+                onClick={toggleDrawer(true)}
+              >
+                <MenuIcon />
+              </IconButton>
+            )}
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <img src="Images/logo.png" height={80} width={80} alt="Logo" />
+            </Typography>
+            {!isMobile && (
+              <>
+                <Button className="animated-text" href="#home" color="inherit">Home</Button>
+                <Button className="animated-text" href="#about" color="inherit">About</Button>
+                <Button className="animated-text" href="#services" color="inherit">Services</Button>
+                <Button className="animated-text" href="#contact" color="inherit">Contact</Button>
+              </>
+            )}
+            {/* <ButtonUsage></ButtonUsage> */}
+          </Toolbar>
+        </AppBar>
+        <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+          {drawerList}
+        </Drawer>
+      </Box>
+    </div>
   );
 }
