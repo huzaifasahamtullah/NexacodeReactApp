@@ -7,7 +7,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const Portfoliodemo = () => {
     const theme = createTheme();
     return (
-        <div className="portfolio-container" style={{ backgroundImage: `url('/Images/portfolio-back.jpg')` }}>
+        <div className="portfolio-container">
             <section className="hero-section">
                 <div className="hero-content">
                     <h1 className="animated-heading">

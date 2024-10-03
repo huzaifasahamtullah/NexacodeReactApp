@@ -16,7 +16,7 @@ function App() {
         <AnimatedCursor />
         <Routes>
           <Route path="/" element={<><Navbar /><BackgroundVideo /><IconCloudDemo /><Home /></>} />
-          <Route path="/portfolio" element={<><PortfolioNavbar /><Portfoliodemo /></>} />
+          <Route path="/portfolio" element={<><PortfolioNavbar /><BackgroundVideo /><Portfoliodemo /></>} />
         </Routes>
         <FixedFooter />
       </div>
