@@ -9,6 +9,7 @@ import { useTheme } from "@mui/material/styles";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Services() {
     const theme = useTheme();
@@ -52,41 +53,46 @@ function Services() {
                         {/* Grid for Cards */}
                         <Grid container spacing={4} sx={{ mt: 3 }}>
                             <Grid item xs={12} sm={6} data-aos="fade-right"> {/* First Box with fade-right animation */}
-                                <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
-                                    <CardContent>
-                                        <Typography variant="h5" color="textPrimary" gutterBottom>
-                                            Web Design and Web Development
-                                        </Typography>
-                                        <div><img src="/Images/7.png" height={300} width={300} alt="Web Design" /></div>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Transform your online presence with our cutting-edge web design and development solutions
-                                            tailored to meet your unique business needs.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            We create responsive, user-friendly websites that not only captivate visitors but also drive engagement and conversions.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                <Link to="/webdesign" style={{ textDecoration: 'none' }}>
+                                    <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                        <CardContent>
+                                            <Typography variant="h5" color="textPrimary" gutterBottom>
+                                                Web Design and Web Development
+                                            </Typography>
+                                            <div><img src="/Images/7.png" height={300} width={300} alt="Web Design" /></div>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Transform your online presence with our cutting-edge web design and development solutions
+                                                tailored to meet your unique business needs.
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary">
+                                                We create responsive, user-friendly websites that not only captivate visitors but also drive engagement and conversions.
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
 
+
                             <Grid item xs={12} sm={6} data-aos="fade-left"> {/* Second Box with fade-left animation */}
-                                <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
-                                    <CardContent>
-                                        <Typography variant="h5" color="textPrimary" gutterBottom>
-                                            Mobile Application Development
-                                        </Typography>
-                                        <div><img src="/Images/2.png" height={300} width={300} alt="Mobile App Development" /></div>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Bring your ideas to life with our innovative mobile application development services.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Designed for both iOS and Android platforms.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            We deliver intuitive, high-performance apps that enhance user experience and drive business growth.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                <Link to="/appdesign" style={{ textDecoration: 'none' }}>
+                                    <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                        <CardContent>
+                                            <Typography variant="h5" color="textPrimary" gutterBottom>
+                                                Mobile Application Development
+                                            </Typography>
+                                            <div><img src="/Images/2.png" height={300} width={300} alt="Mobile App Development" /></div>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Bring your ideas to life with our innovative mobile application development services.
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Designed for both iOS and Android platforms.
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary">
+                                                We deliver intuitive, high-performance apps that enhance user experience and drive business growth.
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
                         </Grid>
 
@@ -96,9 +102,11 @@ function Services() {
                             <Grid item xs={12} sm={6} data-aos="fade-right">
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                        <Typography variant="h5" color="textPrimary" gutterBottom>
-                                            Digital Marketing
-                                        </Typography>
+                                        <Link to="/digitalmarketing" style={{ textDecoration: 'none' }}>
+                                            <Typography variant="h5" color="textPrimary" gutterBottom>
+                                                Digital Marketing
+                                            </Typography>
+                                        </Link>
                                         <div><img src="/Images/4.png" height={300} width={300} alt="Digital Marketing" /></div>
                                         <Typography variant="body2" color="textSecondary">
                                             Boost your online presence with targeted digital marketing strategies.
@@ -120,9 +128,11 @@ function Services() {
                             <Grid item xs={12} sm={6} data-aos="fade-left">
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                        <Typography variant="h5" color="textPrimary" gutterBottom>
-                                            SEO Optimization
-                                        </Typography>
+                                        <Link to="/seo" style={{ textDecoration: 'none' }}>
+                                            <Typography variant="h5" color="textPrimary" gutterBottom>
+                                                SEO Optimization
+                                            </Typography>
+                                        </Link>
                                         <div><img src="/Images/3.png" height={300} width={300} alt="SEO Optimization" /></div>
                                         <Typography variant="body2" color="textSecondary">
                                             Improve your website’s visibility with advanced SEO techniques.
@@ -140,14 +150,16 @@ function Services() {
                                 </Card>
                             </Grid>
                         </Grid>
-                        {/* Repeat for remaining boxes */}
+
                         <Grid container spacing={4} sx={{ mt: 3 }}>
                             <Grid item xs={12} sm={6} data-aos="fade-right">
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                        <Typography variant="h5" color="textPrimary" gutterBottom>
-                                            ERP Systems
-                                        </Typography>
+                                        <Link to="/erp" style={{ textDecoration: 'none' }}>
+                                            <Typography variant="h5" color="textPrimary" gutterBottom>
+                                                ERP Systems
+                                            </Typography>
+                                        </Link>
                                         <div><img src="/Images/5.png" height={300} width={300} alt="ERP Systems" /></div>
                                         <Typography variant="body2" color="textSecondary">
                                             Streamline operations and cut costs with AI-powered ERP solutions.
@@ -168,18 +180,20 @@ function Services() {
                             <Grid item xs={12} sm={6} data-aos="fade-left">
                                 <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                     <CardContent>
-                                        <Typography variant="h5" color="textPrimary" gutterBottom>
-                                            Custom Software Development
-                                        </Typography>
+                                        <Link to="/customsoftware" style={{ textDecoration: 'none' }}>
+                                            <Typography variant="h5" color="textPrimary" gutterBottom>
+                                                Custom Software Development
+                                            </Typography>
+                                        </Link>
                                         <div><img src="/Images/6.png" height={300} width={300} alt="Custom Software Development" /></div>
                                         <Typography variant="body2" color="textSecondary">
                                             Build amazing mobile apps for iOS and Android that your users will love.
                                         </Typography>
                                         <Typography variant="body2" color="textSecondary">
-                                            Create powerful web apps that are easy to use and scale with your business.
+                                            Our experts develop scalable, flexible, and secure software solutions tailored to your needs.
                                         </Typography>
                                         <Typography variant="body2" color="textSecondary">
-                                            Integrate our AI solutions seamlessly with your existing systems and tools.
+                                            We apply best practices and tools to ensure project success and client satisfaction.
                                         </Typography>
                                     </CardContent>
                                 </Card>

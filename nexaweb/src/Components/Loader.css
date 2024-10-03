@@ -1,0 +1,50 @@
+/* Components/Loader.css */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader-circle {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: orange; /* Change this color to match your theme */
+    animation: loader-animation 0.8s infinite alternate;
+  }
+  
+  .loader-circle:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .loader-circle:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes loader-animation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .loading-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: orange; /* Change this color to match your theme */
+    font-weight: bold;
+  }
+  
+  /* linear-gradient(to right, #ff7e5f, #feb47b); */
