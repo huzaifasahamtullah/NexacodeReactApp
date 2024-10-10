@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
-import Navbar from './Components/Navbars/Navbar';
 import BackgroundVideo from './Components/Background/BackgroundVideo';
 import IconCloudDemo from './Components/AnimationComponents/IconCloudDemo';
 import FixedFooter from './Components/Footer/FixedFooter';
@@ -12,6 +11,8 @@ import Webdesign from "./Components/Services/Web/Webdesign";
 import Appdesign from "./Components/Services/App/Appdesign";
 import Loader from './Components/Loader'; // Import the Loader component
 import BackgroundMotion from "./Components/Background/BackgroundMotion";
+import AnimatedNavbar from './Components/Navbars/AnimatedNavbar';
+import { CssBaseline, Container, createTheme, ThemeProvider } from '@mui/material';
 
 function App() {
   const [loading, setLoading] = useState(true); // State to manage loading
@@ -23,7 +24,7 @@ function App() {
 
     return () => clearTimeout(timer); // Cleanup the timeout on unmount
   }, []);
-
+  const theme = createTheme(); // Create a default theme
   return (
     <Router>
       <div className="App">
@@ -33,10 +34,40 @@ function App() {
         ) : (
           <>
             <Routes>
-              <Route path="/" element={<><Navbar /><BackgroundVideo /><IconCloudDemo /><Home /></>} />
-              <Route path="/portfolio" element={<><PortfolioNavbar /><BackgroundMotion></BackgroundMotion> <Portfoliodemo /></>} />
-              <Route path="/webdesign" element={<><PortfolioNavbar /><BackgroundMotion></BackgroundMotion><Webdesign /></>} />
-              <Route path="/appdesign" element={<><PortfolioNavbar /><BackgroundMotion></BackgroundMotion><Appdesign /></>} />
+              <Route path="/" element={<> 
+                <ThemeProvider theme={theme}> {/* Wrap your application with ThemeProvider */}
+                <CssBaseline />
+                <AnimatedNavbar />
+                <Container style={{ marginTop: '100px', padding: '20px' }}>
+                </Container>
+              </ThemeProvider>
+              <BackgroundVideo /><IconCloudDemo /><Home /></>} />
+              <Route path="/portfolio" element={<>
+                <ThemeProvider theme={theme}> {/* Wrap your application with ThemeProvider */}
+                <CssBaseline />
+                <PortfolioNavbar />
+                <Container style={{ marginTop: '100px', padding: '20px' }}>
+                </Container>
+              </ThemeProvider>
+              <BackgroundMotion></BackgroundMotion> <Portfoliodemo /></>} />
+              <Route path="/webdesign" element={<>
+
+                     <ThemeProvider theme={theme}> {/* Wrap your application with ThemeProvider */}
+                <CssBaseline />
+                <PortfolioNavbar />
+                <Container style={{ marginTop: '100px', padding: '20px' }}>
+                </Container>
+              </ThemeProvider>
+              
+              <BackgroundMotion></BackgroundMotion><Webdesign /></>} />
+              <Route path="/appdesign" element={<>
+                <ThemeProvider theme={theme}> {/* Wrap your application with ThemeProvider */}
+                <CssBaseline />
+                <PortfolioNavbar />
+                <Container style={{ marginTop: '100px', padding: '20px' }}>
+                </Container>
+              </ThemeProvider>
+              <BackgroundMotion></BackgroundMotion><Appdesign /></>} />
             </Routes>
             <FixedFooter />
           </>
