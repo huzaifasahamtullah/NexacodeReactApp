@@ -14,8 +14,8 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { alpha } from '@mui/material/styles'; // Use alpha for fade effect
-import { Link } from "react-scroll"; // For smooth scrolling
+import { alpha } from '@mui/material/styles'; 
+import { Link } from "react-scroll"; 
 
 // Custom styled components for animation
 const StyledAppBar = styled(AppBar)(({ theme }) => ({

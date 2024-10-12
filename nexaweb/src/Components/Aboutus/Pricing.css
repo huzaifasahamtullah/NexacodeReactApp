@@ -1,0 +1,39 @@
+.pricing-card {
+    transition: transform 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+.animated-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .pricing-card {
+        margin-top: 10px;
+    }
+
+    h3, h5 {
+        font-size: 1.5rem !important; /* Adjust font size for smaller screens */
+    }
+
+    h6 {
+        font-size: 1.2rem !important;
+    }
+
+    .MuiButton-root {
+        font-size: 0.8rem !important; /* Button text size for mobile */
+    }
+
+    .MuiTableCell-root {
+        font-size: 0.8rem !important; /* Adjust table text for mobile */
+    }
+}

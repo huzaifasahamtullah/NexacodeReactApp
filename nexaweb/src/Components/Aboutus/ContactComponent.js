@@ -12,7 +12,7 @@ function ContactComponent() {
     return (
         <div id="contact">
             <Box sx={{ p: 3, maxWidth: "80%", margin: "auto", color: "white" }}>
-                <Typography variant="h4" align="center" mb={3}>
+                <Typography variant="h4" className="animated-text" align="center" mb={3}>
                     Contact Us
                 </Typography>
                 <Card sx={{ p: 3, backgroundColor: "white", color: "black" }} data-aos="fade-up">

@@ -60,7 +60,7 @@ function About() {
                                         #1 Digital Solution With <b>5+</b> Years Of Experience.
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" paragraph>
-                                        At Nexacode Solutions, we have been at the forefront of digital innovation for over a decade, providing top-tier solutions that empower businesses to thrive in today’s fast-paced digital landscape. With 10 years of experience in delivering cutting-edge software, mobile apps, web development, and UI/UX design, we are your trusted partner in achieving digital success.
+                                        At Nexacode Solutions, we have been at the forefront of digital innovation for over a decade, providing top-tier solutions that empower businesses to thrive in today’s fast-paced digital landscape. With 5+ years of experience in delivering cutting-edge software, mobile apps, web development, and UI/UX design, we are your trusted partner in achieving digital success.
                                     </Typography>
                                 </CardContent>
                             </Card>

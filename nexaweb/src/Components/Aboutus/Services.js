@@ -24,8 +24,8 @@ function Services() {
         <div id="services">
             <Box
                 sx={{
-                    py: 12,
-                    px: 4,
+                    py: 8,
+                    px: 2,
                     backgroundColor: 'transparent',
                     boxShadow: 'none',
                     backdropFilter: 'blur(10px)',
@@ -40,7 +40,7 @@ function Services() {
                             gutterBottom
                             align={isSmallScreen ? "center" : "left"}
                             fontWeight="bold"
-                            data-aos="fade-up"  // Apply AOS animation here
+                            data-aos="fade-up"
                         >
                             <h1 className="animated-text">Our Services & Solutions</h1>
                         </Typography>
@@ -51,15 +51,16 @@ function Services() {
                         </p>
 
                         {/* Grid for Cards */}
-                        <Grid container spacing={4} sx={{ mt: 3 }}>
-                            <Grid item xs={12} sm={6} data-aos="fade-right"> {/* First Box with fade-right animation */}
+                        <Grid container spacing={2} sx={{ mt: 3 }}>
+                            {/* First Row */}
+                            <Grid item xs={12} sm={4} data-aos="fade-right"> {/* 3 columns layout on larger screens */}
                                 <Link to="/webdesign" style={{ textDecoration: 'none' }}>
-                                    <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                    <Card variant="outlined" sx={{ p: 2, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                         <CardContent>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 Web Design and Web Development
                                             </Typography>
-                                            <div><img src="/Images/7.png" height={300} width={300} alt="Web Design" /></div>
+                                            <div><img src="/Images/7.png" height={200} width={200} alt="Web Design" /> {/* Restored original image size */}</div>
                                             <Typography variant="body2" color="textSecondary">
                                                 Transform your online presence with our cutting-edge web design and development solutions
                                                 tailored to meet your unique business needs.
@@ -72,15 +73,14 @@ function Services() {
                                 </Link>
                             </Grid>
 
-
-                            <Grid item xs={12} sm={6} data-aos="fade-left"> {/* Second Box with fade-left animation */}
+                            <Grid item xs={12} sm={4} data-aos="fade-right">
                                 <Link to="/appdesign" style={{ textDecoration: 'none' }}>
-                                    <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                    <Card variant="outlined" sx={{ p: 2, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
                                         <CardContent>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 Mobile Application Development
                                             </Typography>
-                                            <div><img src="/Images/2.png" height={300} width={300} alt="Mobile App Development" /></div>
+                                            <div><img src="/Images/2.png" height={200} width={200} alt="Mobile App Development" /> {/* Restored original image size */}</div>
                                             <Typography variant="body2" color="textSecondary">
                                                 Bring your ideas to life with our innovative mobile application development services.
                                             </Typography>
@@ -94,109 +94,76 @@ function Services() {
                                     </Card>
                                 </Link>
                             </Grid>
-                        </Grid>
 
-                        {/* Repeat for remaining boxes */}
-                        <Grid container spacing={4} sx={{ mt: 3 }}>
-                            {/* Digital Marketing Section */}
-                            <Grid item xs={12} sm={6} data-aos="fade-right">
-                                <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
-                                    <CardContent>
-                                        <Link to="/digitalmarketing" style={{ textDecoration: 'none' }}>
+                            <Grid item xs={12} sm={4} data-aos="fade-right">
+                                <Link to="/digitalmarketing" style={{ textDecoration: 'none' }}>
+                                    <Card variant="outlined" sx={{ p: 2, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                        <CardContent>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 Digital Marketing
                                             </Typography>
-                                        </Link>
-                                        <div><img src="/Images/4.png" height={300} width={300} alt="Digital Marketing" /></div>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Boost your online presence with targeted digital marketing strategies.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Engage customers through social media, email campaigns, and personalized content.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Leverage data analytics to understand user behavior and optimize campaigns.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Grow your brand and increase conversions with our expert marketing services.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                            <div><img src="/Images/4.png" height={200} width={200} alt="Digital Marketing" /> {/* Restored original image size */}</div>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Boost your online presence with targeted digital marketing strategies.
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Engage customers through social media, email campaigns, and personalized content.
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
 
-                            {/* SEO Optimization Section */}
-                            <Grid item xs={12} sm={6} data-aos="fade-left">
-                                <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
-                                    <CardContent>
-                                        <Link to="/seo" style={{ textDecoration: 'none' }}>
+                            {/* Second Row */}
+                            <Grid item xs={12} sm={4} data-aos="fade-right">
+                                <Link to="/seo" style={{ textDecoration: 'none' }}>
+                                    <Card variant="outlined" sx={{ p: 2, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                        <CardContent>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 SEO Optimization
                                             </Typography>
-                                        </Link>
-                                        <div><img src="/Images/3.png" height={300} width={300} alt="SEO Optimization" /></div>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Improve your website’s visibility with advanced SEO techniques.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Achieve higher rankings on search engines through on-page and off-page optimization.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Increase organic traffic with keyword research, link building, and content strategy.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Stay ahead of competitors with our cutting-edge SEO tools and expertise.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                            <div><img src="/Images/3.png" height={200} width={200} alt="SEO Optimization" /> {/* Restored original image size */}</div>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Improve your website’s visibility with advanced SEO techniques.
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Achieve higher rankings on search engines through on-page and off-page optimization.
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
-                        </Grid>
 
-                        <Grid container spacing={4} sx={{ mt: 3 }}>
-                            <Grid item xs={12} sm={6} data-aos="fade-right">
-                                <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
-                                    <CardContent>
-                                        <Link to="/erp" style={{ textDecoration: 'none' }}>
+                            <Grid item xs={12} sm={4} data-aos="fade-right">
+                                <Link to="/erp" style={{ textDecoration: 'none' }}>
+                                    <Card variant="outlined" sx={{ p: 2, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                        <CardContent>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 ERP Systems
                                             </Typography>
-                                        </Link>
-                                        <div><img src="/Images/5.png" height={300} width={300} alt="ERP Systems" /></div>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Streamline operations and cut costs with AI-powered ERP solutions.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Predict equipment failures and avoid downtime with AI-powered maintenance.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Optimize your supply chain with AI-powered forecasting and management.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Automate tasks and free up your team for more strategic work.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                            <div><img src="/Images/5.png" height={200} width={200} alt="ERP Systems" /> {/* Restored original image size */}</div>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Streamline operations and cut costs with AI-powered ERP solutions.
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
 
-                            <Grid item xs={12} sm={6} data-aos="fade-left">
-                                <Card variant="outlined" sx={{ p: 3, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
-                                    <CardContent>
-                                        <Link to="/customsoftware" style={{ textDecoration: 'none' }}>
+                            <Grid item xs={12} sm={4} data-aos="fade-right">
+                                <Link to="/customsoftware" style={{ textDecoration: 'none' }}>
+                                    <Card variant="outlined" sx={{ p: 2, transition: "0.7s", '&:hover': { transform: 'scale(1.03)', transition: '0.3s ease-in-out' } }}>
+                                        <CardContent>
                                             <Typography variant="h5" color="textPrimary" gutterBottom>
                                                 Custom Software Development
                                             </Typography>
-                                        </Link>
-                                        <div><img src="/Images/6.png" height={300} width={300} alt="Custom Software Development" /></div>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Build amazing mobile apps for iOS and Android that your users will love.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            Our experts develop scalable, flexible, and secure software solutions tailored to your needs.
-                                        </Typography>
-                                        <Typography variant="body2" color="textSecondary">
-                                            We apply best practices and tools to ensure project success and client satisfaction.
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                                            <div><img src="/Images/6.png" height={200} width={200} alt="Custom Software" /> {/* Restored original image size */}</div>
+                                            <Typography variant="body2" color="textSecondary">
+                                                Enhance your business processes with custom software development.
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
                             </Grid>
                         </Grid>
                     </Box>
