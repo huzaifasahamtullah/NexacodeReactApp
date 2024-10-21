@@ -67,23 +67,6 @@ const Webdesign = () => {
         AOS.init({ duration: 1000, easing: 'ease-out-cubic', delay: 200, once: true });
     }, []);
 
-    // Scroll detection for fade-in effect
-    useEffect(() => {
-        const handleScroll = () => {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((element) => {
-                const position = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (position < windowHeight - 100) {
-                    setVisible((prev) => [...prev, element]);
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     const handleLearnMoreClick = (images) => {
         setSelectedImages(images);
         setOpen(true);
@@ -143,6 +126,8 @@ const Webdesign = () => {
                     color="textSecondary"
                     sx={{ color: '#424242', zIndex: 2 }}
                     gutterBottom
+                    data-aos="fade-up"
+                    data-aos-delay="200"
                 >
                     Explore insights, trends, and tips on web design and development.
                 </Typography>
@@ -228,7 +213,7 @@ const Webdesign = () => {
                                 }
                             }}
                             data-aos="fade-up"
-                            className={`fade-in ${visible.includes(document.querySelector(`.fade-in:nth-of-type(${index + 1})`)) ? 'visible' : ''}`}
+                            data-aos-delay={index * 200}  {/* Staggered delay for each card */}
                         >
                             <CardContent>
                                 {card.icon}
